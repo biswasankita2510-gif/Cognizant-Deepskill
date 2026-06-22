@@ -2,14 +2,10 @@
 
 class FinancialForecast
 {
-    // Recursive method to calculate future value
     static double PredictFutureValue(double currentValue, double growthRate, int years)
     {
-        // Base case
         if (years == 0)
             return currentValue;
-
-        // Recursive case
         return PredictFutureValue(
             currentValue * (1 + growthRate),
             growthRate,
@@ -19,8 +15,8 @@ class FinancialForecast
 
     static void Main(string[] args)
     {
-        double currentValue = 10000; // Initial investment
-        double growthRate = 0.10;    // 10% annual growth
+        double currentValue = 10000; 
+        double growthRate = 0.10;   
         int years = 5;
 
         double futureValue = PredictFutureValue(currentValue, growthRate, years);
